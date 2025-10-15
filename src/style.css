@@ -1,0 +1,469 @@
+/* ======= ESTILOS GENERALES ======= */
+body {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background: #f7f9fc;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+.dashboard-container {
+  background: #fff;
+  border-radius: 18px;
+  padding: 40px 50px;
+  max-width: 1200px;
+  width: 95%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ======= HEADER ======= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0d47a1;
+}
+
+.user-info {
+  text-align: right;
+}
+
+.user-info span {
+  font-weight: 600;
+  color: #0d47a1;
+}
+
+.logout-btn {
+  margin-top: 5px;
+  background-color: #00796b;
+  border: none;
+  color: white;
+  padding: 7px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: #004d40;
+}
+
+/* ======= PANEL FINANCIERO ======= */
+.panel-financiero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.panel-financiero h2 {
+  font-size: 1.7rem;
+  color: #0d47a1;
+  margin-bottom: 25px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.card {
+  background: #f9fbff;
+  border: 1px solid #dde3f0;
+  border-radius: 12px;
+  width: 100%;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(13, 71, 161, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card p {
+  font-size: 15px;
+  color: #666;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.card.pendiente h3 {
+  color: #c62828;
+}
+
+.card.pagado h3 {
+  color: #2e7d32;
+}
+
+.card.total h3 {
+  color: #1565c0;
+}
+
+/* ======= SECCIÓN DE DEUDAS ======= */
+.deudas-section {
+  margin-top: 50px;
+}
+
+.deudas-section h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #0d47a1;
+  margin-bottom: 20px;
+}
+
+.deuda-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0 30px 0;
+}
+
+.deuda-form select,
+.deuda-form input {
+  padding: 10px 14px;
+  border: 1px solid #ccd6e3;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.deuda-form input:focus,
+.deuda-form select:focus {
+  border-color: #1565c0;
+  box-shadow: 0 0 5px rgba(21, 101, 192, 0.2);
+}
+
+.deuda-form button {
+  background-color: #1565c0;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.deuda-form button:hover {
+  background-color: #0d47a1;
+}
+
+/* ======= TABLAS ======= */
+.deudas-tabla,
+.cuotas-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.deudas-tabla th,
+.cuotas-tabla th {
+  background-color: #1565c0;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.deudas-tabla td,
+.cuotas-tabla td {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.deudas-tabla tr:hover,
+.cuotas-tabla tr:hover {
+  background-color: #f4f8ff;
+}
+
+.estado-pagado {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.estado-pendiente {
+  color: #c62828;
+  font-weight: bold;
+}
+
+/* ======= BOTONES ======= */
+.btn-pagado {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: 0.2s;
+}
+
+.btn-pendiente {
+  background-color: #c62828;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: 0.2s;
+}
+
+.btn-cuotas {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-pagado:hover {
+  background-color: #1b5e20;
+}
+
+.btn-pendiente:hover {
+  background-color: #8e0000;
+}
+
+.btn-cuotas:hover {
+  background-color: #0d47a1;
+}
+
+/* ======= TABLA DE CUOTAS (MEJORADA Y RESPONSIVA) ======= */
+.cuotas-tabla {
+  margin-top: 10px;
+  background-color: #fafbff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+.cuotas-tabla th {
+  background-color: #1e88e5;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  padding: 12px;
+}
+
+.cuotas-tabla td {
+  text-align: center;
+  padding: 12px 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.cuotas-tabla td button {
+  font-size: 13px;
+  min-width: 100px;
+}
+
+.cuotas-tabla tr td {
+  transition: background-color 0.2s ease;
+}
+
+.cuotas-tabla tr td.estado-pagado {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.cuotas-tabla tr td.estado-pendiente {
+  background-color: #ffebee;
+  color: #c62828;
+  font-weight: bold;
+}
+
+/* 🧩 Diseño responsivo */
+@media (max-width: 768px) {
+  .cuotas-tabla,
+  .deudas-tabla {
+    font-size: 13px;
+  }
+
+  .cuotas-tabla th,
+  .deudas-tabla th {
+    padding: 10px;
+  }
+
+  .cuotas-tabla td,
+  .deudas-tabla td {
+    padding: 8px;
+  }
+
+  .cuotas-tabla td button {
+    min-width: 80px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cuotas-tabla {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .cuotas-tabla th,
+  .cuotas-tabla td {
+    font-size: 12px;
+    padding: 8px 6px;
+  }
+}
+
+/* ======= LOGIN Y REGISTRO ======= */
+.auth-container {
+  max-width: 420px;
+  margin: 80px auto;
+  background: white;
+  border-radius: 16px;
+  padding: 40px 50px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h2 {
+  font-size: 1.8rem;
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+
+.auth-subtitle {
+  color: #607d8b;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccd6e3;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  outline: none;
+}
+
+.auth-container input:focus {
+  border-color: #1565c0;
+  box-shadow: 0 0 4px rgba(21, 101, 192, 0.3);
+}
+
+.auth-container button {
+  width: 100%;
+  background-color: #1565c0;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.2s;
+}
+
+.auth-container button:hover {
+  background-color: #0d47a1;
+}
+
+.auth-container p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #444;
+}
+
+.link {
+  color: #1565c0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ======= FOOTER ======= */
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+}
+
+.footer span {
+  color: #1565c0;
+  font-weight: bold;
+}
+
+/* ======== PESTAÑAS ======== */
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.tab {
+  background-color: #e3f2fd;
+  border: 1px solid #90caf9;
+  color: #1565c0;
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.tab:hover {
+  background-color: #bbdefb;
+}
+
+.tab.active {
+  background-color: #1565c0;
+  color: white;
+  border-color: #0d47a1;
+}
+
+/* ======= SWEETALERT ======= */
+.swal2-popup {
+  font-family: "Poppins", sans-serif;
+  border-radius: 12px !important;
+}
+
+.swal2-title {
+  color: #0d47a1 !important;
+  font-weight: 700;
+}
+
+.swal2-confirm {
+  background-color: #1565c0 !important;
+  border-radius: 6px !important;
+}
